@@ -6,11 +6,12 @@ fetch("https://api.pexels.com/v1/search?query=hamsters", {
   .then((response) => {
     console.log(response);
     if (response.ok) {
-      return response.json(); 
+      return response.json();
     } else {
-      throw new Error("Errore nella richiesta: " + response.status); 
+      throw new Error("Errore nella richiesta: " + response.status);
+    }
   })
   .then((photosObj) => {
-    console.log(photosObj); 
+    console.log(photosObj);
   })
   .catch((error) => console.error("Errore:", error));
